@@ -30,7 +30,7 @@ void setup() {
   M5.Lcd.println("BLE Shutter");
   M5.Lcd.setCursor(0, 40);
   M5.Lcd.println("BtnA :Shutter");
-  M5.Lcd.println("     LiuC0j");
+  M5.Lcd.println("     Ready!");
 
   // Battery level can only be set at startup
   bleKeyboard.setBatteryLevel(getVlevel());
@@ -41,7 +41,7 @@ void loop() {
   // Button state update
   M5.update();
   M5.Lcd.setCursor(0, 0);
-  // キー操作
+  // Key operation
   if (bleKeyboard.isConnected()) {
     if (Connected==false){
       M5.Lcd.fillScreen(GREEN);
